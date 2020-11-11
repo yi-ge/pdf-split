@@ -1,0 +1,4 @@
+config:
+  host: "https://pdf.ykfz.pw"
+  public-path: "./public"
+  cron: "35 0 * * * *"
