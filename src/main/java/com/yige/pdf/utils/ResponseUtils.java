@@ -14,9 +14,6 @@ public class ResponseUtils {
             return null;
         }
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "*");
-        headers.add("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS");
-        headers.add("Access-Control-Allow-Headers", "Accept, Authorization, Cache-Control, Content-Type, DNT, If-Modified-Since, Keep-Alive, Origin, User-Agent, X-Requested-With, Token, x-access-token, X-Log, X-Reqid");
         headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
         headers.add("Content-Disposition", "inline; filename=" + file.getName());
         headers.add("Pragma", "no-cache");

@@ -128,11 +128,13 @@ public class Controller {
         return threadPoolTaskScheduler;
     }
 
+    @CrossOrigin(origins = "*",maxAge = 3600)
     @GetMapping(value = "/", produces = {"application/json;charset=utf-8"})
     public String get(@RequestParam(value = "perpage", defaultValue = "5") String perpage, @RequestParam(value = "url") String url) throws IOException {
         return splitPDF(perpage, url);
     }
 
+    @CrossOrigin(origins = "*",maxAge = 3600)
     @PostMapping(value = "/", produces = {"application/json;charset=utf-8"})
     public String post(@RequestBody JSONObject body) throws IOException {
         String perpage = body.getString("perpage");
@@ -140,6 +142,7 @@ public class Controller {
         return splitPDF(perpage, url);
     }
 
+    @CrossOrigin(origins = "*",maxAge = 3600)
     @GetMapping(value = "/{hash}/{name}")
     public ResponseEntity<FileSystemResource> getToolByToolName(@PathVariable("hash") String hash, @PathVariable("name") String name) {
         File file = new File(PUBLIC_PATH + "/" + hash + "/" + name);

@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.yige</groupId>
     <artifactId>pdf</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>pdf</name>
     <description>PDF Split API</description>
 
